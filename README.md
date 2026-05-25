@@ -1,6 +1,6 @@
 # Tensor Trading Terminal
 
-An advanced, high-performance paper trading and simulated market platform built on top of robust RESTful APIs. Tensor provides a seamless, device-agnostic trading experience featuring real-time market quotes, F&O derivatives support, dynamic margin calculations, and a fully decentralized serverless architecture.
+An advanced, high-performance paper trading cash and derivatives market platform built on top of robust RESTful APIs. Tensor provides a seamless, device-agnostic trading experience featuring real-time market quotes, F&O derivatives support, dynamic margin calculations, and a fully decentralized serverless architecture.
 
 ## 🚀 Key Features
 
