@@ -1,10 +1,10 @@
 # Tensor Trading Terminal
 
-An advanced, high-performance paper trading and simulated market platform built on top of the Paytm Money Open API. Tensor provides a seamless, device-agnostic trading experience featuring real-time market quotes, F&O derivatives support, dynamic margin calculations, and a fully decentralized serverless architecture.
+An advanced, high-performance paper trading and simulated market platform built on top of robust RESTful APIs. Tensor provides a seamless, device-agnostic trading experience featuring real-time market quotes, F&O derivatives support, dynamic margin calculations, and a fully decentralized serverless architecture.
 
 ## 🚀 Key Features
 
-*   **Real-Time Data Integration**: Direct connectivity to the Paytm Money API for live NSE/BSE equity and derivatives data.
+*   **Real-Time Data Integration**: Direct connectivity to external RESTful APIs for live NSE/BSE equity and derivatives data.
 *   **Decentralized Persistence**: Utilizes a highly robust Serverless Cloud Memory (Vercel KV/Upstash Redis) to instantly synchronize your live portfolio, orders, and watchlists globally across all your devices.
 *   **Optimistic UI Updates**: Built with Next.js, the frontend leverages zero-latency optimistic state mutations for instant trade execution feedback, silently syncing with the cloud backend.
 *   **F&O Engine**: Complete support for Futures and Options with live Options Chain fetching, dynamic strike tracking, and automatic expiration settlement for expired derivative contracts.
@@ -31,12 +31,12 @@ To run the Tensor Trading Terminal locally:
     ```
 
 2.  **Environment Variables:**
-    Create a `.env.local` file in the root directory and configure your Paytm Money API credentials:
+    Create a `.env.local` file in the root directory and configure your RESTful API credentials:
     ```env
-    PAYTM_MONEY_API_KEY=your_api_key
-    PAYTM_MONEY_API_SECRET=your_api_secret
+    MARKET_API_KEY=your_api_key
+    MARKET_API_SECRET=your_api_secret
     ```
-    *Note: The `PAYTM_MONEY_ACCESS_TOKEN` is managed and updated dynamically in the remote Redis database.*
+    *Note: The `MARKET_ACCESS_TOKEN` is managed and updated dynamically in the remote Redis database.*
 
 3.  **Start the Server:**
     ```bash
