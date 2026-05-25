@@ -34,7 +34,7 @@ function CallbackHandler() {
 
         if (res.ok && data.access_token) {
            setStatus("SUCCESS");
-           setMessage("Access token successfully generated and written to .env.local!");
+           setMessage("Access token successfully generated and saved to the remote Serverless Memory!");
         } else {
            setStatus("ERROR");
            setMessage(data.error || data.message || "Failed to exchange token.");
@@ -64,8 +64,8 @@ function CallbackHandler() {
            <h1 style={{ fontSize: "24px", color: "var(--text-primary)" }}>Authentication Successful</h1>
            <p style={{ color: "var(--text-secondary)", marginTop: "8px" }}>{message}</p>
            
-           <div style={{ padding: "16px", background: "rgba(255, 170, 0, 0.1)", border: "1px solid rgba(255, 170, 0, 0.3)", borderRadius: "8px", marginTop: "24px", color: "var(--text-primary)" }}>
-              <strong>Important:</strong> Since your .env.local file was updated automatically, you MUST restart your Next.js development server for the changes to take effect.
+           <div style={{ padding: "16px", background: "rgba(0, 255, 170, 0.1)", border: "1px solid rgba(0, 255, 170, 0.3)", borderRadius: "8px", marginTop: "24px", color: "var(--text-primary)" }}>
+              <strong>All Set!</strong> Your API token is now globally synced in the cloud. You can return to trading immediately, no restarts required.
            </div>
 
            <Link href="/" style={{ display: "inline-block", marginTop: "32px", padding: "12px 32px", background: "var(--accent-primary)", color: "white", borderRadius: "8px", textDecoration: "none", fontWeight: 600 }}>
