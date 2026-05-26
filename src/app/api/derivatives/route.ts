@@ -88,7 +88,7 @@ export async function GET(request: Request) {
     });
 
     const ltpMap: Record<string, number> = {};
-    const accessToken = await getMemoryKey('MARKET_ACCESS_TOKEN');
+    const accessToken = await getMemoryKey('PAYTM_MONEY_ACCESS_TOKEN');
     
     if (accessToken && prefs.length > 0) {
        const chunkSize = 40;

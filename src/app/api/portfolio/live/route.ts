@@ -9,7 +9,7 @@ export async function GET(request: Request) {
     return NextResponse.json({ error: "prefs parameter is required" }, { status: 400 });
   }
 
-  const accessToken = await getMemoryKey('MARKET_ACCESS_TOKEN');
+  const accessToken = await getMemoryKey('PAYTM_MONEY_ACCESS_TOKEN');
   if (!accessToken) {
     return NextResponse.json({ error: "Access token missing" }, { status: 401 });
   }

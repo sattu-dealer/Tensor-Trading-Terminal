@@ -9,8 +9,8 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "request_token is required" }, { status: 400 });
     }
 
-    const apiKey = process.env.MARKET_API_KEY;
-    const apiSecret = process.env.MARKET_API_SECRET;
+    const apiKey = process.env.PAYTM_MONEY_API_KEY;
+    const apiSecret = process.env.PAYTM_MONEY_API_SECRET;
 
     if (!apiKey || !apiSecret) {
       return NextResponse.json({ error: "API credentials not configured in environment" }, { status: 500 });
@@ -40,8 +40,8 @@ export async function POST(request: Request) {
 
     // data typically contains { access_token, public_access_token, read_access_token }
     if (data.access_token) {
-        await setMemoryKey('MARKET_ACCESS_TOKEN', data.access_token);
-        await setMemoryKey('MARKET_REQUEST_TOKEN', request_token);
+        await setMemoryKey('PAYTM_MONEY_ACCESS_TOKEN', data.access_token);
+        await setMemoryKey('PAYTM_MONEY_REQUEST_TOKEN', request_token);
     }
 
     return NextResponse.json(data);

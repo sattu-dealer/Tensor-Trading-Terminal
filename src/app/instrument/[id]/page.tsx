@@ -126,7 +126,7 @@ export default function InstrumentPage({ params }: { params: Promise<{ id: strin
     <div style={{ padding: "40px", textAlign: "center", color: "var(--trade-down)" }}>
       <h3>Error Loading Market Data</h3>
       <p>{error}</p>
-      <p style={{ marginTop: "16px", color: "var(--text-secondary)" }}>Please check your .env.local credentials and ensure MARKET_ACCESS_TOKEN is set.</p>
+      <p style={{ marginTop: "16px", color: "var(--text-secondary)" }}>Please check your .env.local credentials and ensure PAYTM_MONEY_ACCESS_TOKEN is set.</p>
     </div>
   );
 
