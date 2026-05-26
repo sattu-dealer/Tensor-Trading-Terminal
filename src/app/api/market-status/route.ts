@@ -3,7 +3,7 @@ import { getMemoryKey } from "@/lib/memory";
 
 export async function GET(request: Request) {
   try {
-    const accessToken = await getMemoryKey('PAYTM_MONEY_ACCESS_TOKEN');
+    const accessToken = await getMemoryKey('MARKET_ACCESS_TOKEN');
     if (!accessToken) {
       return NextResponse.json({ status: "UNKNOWN", error: "Missing Access Token" }, { status: 401 });
     }

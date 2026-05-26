@@ -31,10 +31,10 @@ export async function GET(request: Request) {
   }
 
   // 2. Fetch real data from Paytm Money
-  const accessToken = await getMemoryKey('PAYTM_MONEY_ACCESS_TOKEN');
+  const accessToken = await getMemoryKey('MARKET_ACCESS_TOKEN');
   
   if (!accessToken) {
-    return NextResponse.json({ error: "PAYTM_MONEY_ACCESS_TOKEN is missing in memory" }, { status: 401 });
+    return NextResponse.json({ error: "MARKET_ACCESS_TOKEN is missing in memory" }, { status: 401 });
   }
 
   try {
